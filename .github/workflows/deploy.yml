@@ -6,9 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: fermyon/actions/spin/setup@v1
+        with:
+          plugins: cloud
       - uses: fermyon/actions/spin/deploy@v1
         with:
           fermyon_token: ${{ secrets.FERMYON_CLOUD_TOKEN }}
+
+
 
 
 
